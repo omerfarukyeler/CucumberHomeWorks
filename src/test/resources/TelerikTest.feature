@@ -12,8 +12,8 @@ Feature:Kullanici arama sayfasina bilgilerini girer ve ana sayfaya gecis yapar
     And Kullanici ust menu bar dan arama simgesine tiklar
     And Kullanici search box kutusuna "<kadi>" yazar
     And Kullanici arama butonuna tiklar
-    And Arama sonucu cikan ilk secenegin ilgili kelimeleri barindirdigi Assert edilir
-    Then Kullanici sayfayi kapatmalidir
+    Then Arama sonucu cikan ilk secenegin ilgili kelimeleri barindirdigi Assert edilir
+    And Kullanici sayfayi kapatmalidir
     Examples:
       |kadi            |
       |keywordtest     |

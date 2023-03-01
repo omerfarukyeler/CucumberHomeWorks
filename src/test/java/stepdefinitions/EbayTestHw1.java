@@ -21,9 +21,16 @@ public class EbayTestHw1 {
     }
 
     @When("Kullanici Cookies secenegini Accept All secenegi ile kabul eder")
-    public void kullaniciCookiesSeceneginiAcceptAllSecenegiIleKabulEder() {
+    public void kullaniciCookiesSeceneginiAcceptAllSecenegiIleKabulEder() throws InterruptedException {
 
-        ebayPages.cookies.click();
+
+        try {
+            ebayPages.cookies.click();
+        }
+        catch (Exception a){
+            a.getStackTrace();
+        }
+
 
     }
 

@@ -83,6 +83,12 @@
                 <artifactId>lombok</artifactId>
                 <version>1.18.24</version>
             </dependency>
-        </dependencies>
+        <dependency>
+            <groupId>com.github.vladislavsevruk</groupId>
+            <artifactId>recursive-assertion-testng</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
+    </dependencies>
 
 </project>

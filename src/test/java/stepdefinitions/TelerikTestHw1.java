@@ -12,8 +12,10 @@ import utilities.Driver;
 public class TelerikTestHw1 {
     TelerikPages telerikPages = new TelerikPages();
     @Given("Kullanici giris ana sayfasina gider")
-    public void kullaniciGirisAnaSayfasinaGider() {
+    public void kullaniciGirisAnaSayfasinaGider() throws InterruptedException {
+
         Driver.getDriver().get(ConfigReader.getProperty("url"));
+        Thread.sleep(2000);
     }
 
     @When("Kullanici Cookies secenegini Accept and Close a tiklar")
