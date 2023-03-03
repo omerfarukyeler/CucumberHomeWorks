@@ -84,9 +84,9 @@
                 <version>1.18.24</version>
             </dependency>
         <dependency>
-            <groupId>com.github.vladislavsevruk</groupId>
-            <artifactId>recursive-assertion-testng</artifactId>
-            <version>1.0.1</version>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.1.0</version>
         </dependency>
 
     </dependencies>

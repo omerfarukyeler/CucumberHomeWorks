@@ -1,4 +1,4 @@
-Feature: Kullanıcı sepete bir urun ekeler ve sepet simgesi uzerinde bu urun sayısındaki artisi görür
+Feature: Kullanıcı sepete bir urun ekler ve sepet simgesi uzerinde bu urun sayısındaki artisi görür
 
   Background:
     Given Kullanici ana sayfaya gider
@@ -11,4 +11,4 @@ Feature: Kullanıcı sepete bir urun ekeler ve sepet simgesi uzerinde bu urun sa
     And Kullanici bir paketi buy now butonu ile sepete ekler
     And Kullanici ikincicookiesi kabul eder
     And Kullanici ana sayfaya tekrar geri gider
-    Then  Kullanici sepet simgesi uzerindeki rakami dogrular
+    Then Kullanici sepet simgesi uzerindeki rakami dogrular

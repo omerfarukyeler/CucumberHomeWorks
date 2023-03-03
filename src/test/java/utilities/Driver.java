@@ -12,6 +12,8 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import java.time.Duration;
+
 public class Driver {
     public static WebDriver driver; // selenium dependency bunun icin gerekli
 
@@ -24,7 +26,7 @@ public class Driver {
             switch (ConfigReader.getProperty("browser")){
 
                 case "chrome":
-                default:
+                default://yanliş bi şey girildiğinde bile chrome çalışır onun için kullandık .
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("start-maximized");
                     WebDriverManager.chromedriver().setup(); // bonogarcia dependency bunun için gerekli
@@ -73,8 +75,8 @@ public class Driver {
                     break;
             }
         }
-        //driver.manage().window().maximize();
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         return driver;
     }

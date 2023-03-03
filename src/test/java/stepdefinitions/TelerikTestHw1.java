@@ -5,12 +5,15 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import pages.TelerikPages;
+import utilities.CommenSteps;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 public class TelerikTestHw1 {
     TelerikPages telerikPages = new TelerikPages();
+    CommenSteps commenSteps=new CommenSteps();
     @Given("Kullanici giris ana sayfasina gider")
     public void kullaniciGirisAnaSayfasinaGider() throws InterruptedException {
 
@@ -20,7 +23,8 @@ public class TelerikTestHw1 {
 
     @When("Kullanici Cookies secenegini Accept and Close a tiklar")
     public void kullaniciCookiesSeceneginiAcceptAndCloseATiklar() {
-        telerikPages.cookies.click();
+
+       telerikPages.cookies.click();
 
     }
 
