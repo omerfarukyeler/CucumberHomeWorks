@@ -18,17 +18,19 @@ public class SepettenUrunSilmeSteps {
     CommenSteps commenSteps =new CommenSteps();
     Hooks hooks = new Hooks();
 
+
+
     public String number2;
 
     @Given("Given kullanici  web sayfasina gider")
     public void givenKullaniciWebSayfasinaGider() {
 
         Driver.getDriver().get(ConfigReader.getProperty("url"));
-    }
+        }
     @When("kullanici cookiesi kabul eder")
     public void kullaniciCookiesiKabulEder() {
         try {
-            CommenSteps.waitForVisibility(urunEklemePages.cookies,10);
+            CommenSteps.waitForClickablility(urunEklemePages.cookies,10);
             urunEklemePages.cookies.click();
         }
         catch (Exception a){
@@ -41,48 +43,72 @@ public class SepettenUrunSilmeSteps {
         urunEklemePages.pricingButton.click();
 
 
+
     }
 
 
     @And("kullanici BuyNow butonu ile sepete bir urun ekler")
     public void kullaniciBuyNowButonuIleSepeteBirUrunEkler() throws InterruptedException {
+        //CommenSteps.waitForClickablility(urunEklemePages.buyNow,10);
+        //urunEklemePages.buyNow.click();
+
         urunEklemePages.buyNow.click();
-        Thread.sleep(5000);
+        //Thread.sleep(2000);
+       // Driver.wait(3);
+
+
+
+
+
+
     }
 
     @And("kullanici Pricing sayfasina geri doner")
     public void kullaniciPricingSayfasinaGeriDoner() throws InterruptedException {
-        Driver.getDriver().navigate().back();
+
+        urunEklemePages.mainPageReturn.click();
+
+
+
+
+
 
 
     }
 
     @And("kullanici Buynow butonu ile bir urun daha ekler")
     public void kullaniciBuynowButonuIleBirUrunDahaEkler() throws InterruptedException {
+        urunEklemePages.pricingButton.click();
         urunEklemePages.secondBuyNow.click();
-        Thread.sleep(5000);
+        ///Thread.sleep(3000);
+
+
+
 
     }
 
     @And("kullanici ana sayfaya geri doner")
     public void kullaniciAnaSayfayaGeriDoner() throws InterruptedException {
 
-        urunEklemePages.mainPageReturn.click();
-        Thread.sleep(3000);
+         urunEklemePages.mainPageReturn.click();
+
+
+
     }
 
     @And("kullanici sepete uzerindeki mevcut sayiyi alir")
-    public void kullaniciSepeteUzerindekiMevcutSayiyiAlir() {
+    public void kullaniciSepeteUzerindekiMevcutSayiyiAlir() throws InterruptedException {
 
         number2 = urunEklemePages.productkontrol.getText();
         System.out.println(number2);
+        ///Thread.sleep(3000);
 
     }
 
     @And("kullanici sepete tekrar gider")
     public void kullaniciSepeteTekrarGider() throws InterruptedException {
         urunEklemePages.shoppingcart.click();
-        Thread.sleep(3000);
+
 
 
     }
@@ -90,7 +116,7 @@ public class SepettenUrunSilmeSteps {
     @And("kullanici sepetteki urunlerden bir tanesini Delete linki ile siler")
     public void kullaniciSepettekiUrunlerdenBirTanesiniDeleteLinkiIleSiler() throws InterruptedException {
         urunEklemePages.deleteItems.click();
-        Thread.sleep(3000);
+        ///Thread.sleep(1000);
         urunEklemePages.mainPageReturn.click();
 
 

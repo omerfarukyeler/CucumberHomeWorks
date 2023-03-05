@@ -24,7 +24,7 @@ public class UrunEklemePages {
     @FindBy( xpath = "//span[@class='TK-Counter TK-Counter--SC TK-Counter--Visible']")
     public  WebElement ActualData;
 
-    @FindBy(xpath = "(//a[@class='Btn Btn--prim4 u-db'])[1]")
+    @FindBy(xpath = "(//a[@class='Btn Btn--prim4 u-db'])[3]")
     public WebElement secondBuyNow;
 
     @FindBy(xpath="//a[@class='TK-TLRK-Logo']")
