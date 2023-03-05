@@ -126,9 +126,12 @@ public class SepettenUrunSilmeSteps {
     public void kullaniciSepetSimgesiUzerindekiSayininBirEksildiginiKontrolEder() {
         String number1 =urunEklemePages.productkontrol.getText();
         System.out.println(number1);
-        Integer as =Integer.valueOf(number1)-1;
-        Integer lasd=Integer.valueOf(number2);
-        softAssert.assertEquals(as,lasd,"hataverdi");
+        Integer number_2 =Integer.valueOf(number2)-1;
+        Integer number_1=Integer.valueOf(number1);
+        softAssert.assertEquals(number_2,number_1,"assert hataverdi");
+        softAssert.assertAll();
+
+
     }
 
 
