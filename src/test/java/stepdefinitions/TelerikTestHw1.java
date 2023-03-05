@@ -30,6 +30,7 @@ public class TelerikTestHw1 {
 
     @And("Kullanici ust menu bar dan arama simgesine tiklar")
     public void kullaniciUstMenuBarDanAramaSimgesineTiklar() {
+
         telerikPages.searchbox1.click();
     }
     @And("Kullanici search box kutusuna {string} yazar")
@@ -42,6 +43,7 @@ public class TelerikTestHw1 {
 
     @And("Kullanici arama butonuna tiklar")
     public void kullaniciAramaButonunaTiklar() {
+
         telerikPages.searchbutton1.click();
     }
 
@@ -50,10 +52,6 @@ public class TelerikTestHw1 {
         String Expected = "keywordtest";
         Assert.assertTrue(telerikPages.ActualData.isDisplayed());
     }
-
-
-
-
 
     @Then("Kullanici sayfayi kapatmalidir")
     public void kullaniciSayfayiKapatmalidir() {

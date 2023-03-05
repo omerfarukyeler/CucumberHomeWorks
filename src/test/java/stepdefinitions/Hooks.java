@@ -33,12 +33,12 @@ public class Hooks {
             picture = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(picture, "image/png", "passed" + scenario.getName());
         }
-        Driver.closeDriver();
+        //Driver.closeDriver();
     }
 
     @AfterStep
     public void makeSlowRunning() throws InterruptedException {
-       //Driver.wait(1);
+       //Driver.wait(3);
         this.stepCount = stepCount + 1;
         System.out.println((stepCount) + ". STEP");
     }

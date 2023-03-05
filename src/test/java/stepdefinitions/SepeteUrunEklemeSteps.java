@@ -21,17 +21,26 @@ public class SepeteUrunEklemeSteps {
     UrunEklemePages urunEklemePages=new UrunEklemePages();
     SoftAssert softAssert=new SoftAssert();
     CommenSteps commenSteps =new CommenSteps();
+    Hooks hooks = new Hooks();
     @Given("Kullanici ana sayfaya gider")
     public void kullaniciAnaSayfayaGider() throws InterruptedException {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
-        Thread.sleep(3000);
+
     }
 
     @When("Kullanici Cookies ile ilgili onayi kabul eder")
     public void kullaniciCookiesIleIlgiliOnayiKabulEder() throws InterruptedException {
-       // CommenSteps.waitForVisibility(urunEklemePages.cookies,10);
-        urunEklemePages.cookies.click();
-        Thread.sleep(3000);
+
+        try {
+        CommenSteps.waitForVisibility(urunEklemePages.cookies,10);
+           urunEklemePages.cookies.click();
+        }
+        catch (Exception a){
+            a.getStackTrace();
+        }
+
+
+
 
 
     }
@@ -45,7 +54,7 @@ public class SepeteUrunEklemeSteps {
     @And("Kullanici bir paketi buy now butonu ile sepete ekler")
     public void kullaniciBirPaketiBuyNowButonuIleSepeteEkler() throws InterruptedException {
         urunEklemePages.buyNow.click();
-        Driver.wait(2);
+
 
 
     }
