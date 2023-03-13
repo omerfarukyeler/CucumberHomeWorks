@@ -11,7 +11,7 @@ import utilities.Driver;
 public class Hooks {
     static int stepCount;
 
-    @Before
+   /* @Before
     public void setup() {
         Driver.getDriver();
     }
@@ -41,5 +41,5 @@ public class Hooks {
         Driver.wait(3);
         this.stepCount = stepCount + 1;
         System.out.println((stepCount) + ". STEP");
-    }
+    }*/
 }

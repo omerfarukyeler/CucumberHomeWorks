@@ -50,8 +50,6 @@ public class SepettenUrunSilmeSteps {
     @And("kullanici BuyNow butonu ile sepete bir urun ekler")
     public void kullaniciBuyNowButonuIleSepeteBirUrunEkler() throws InterruptedException {
         //CommenSteps.waitForClickablility(urunEklemePages.buyNow,10);
-        //urunEklemePages.buyNow.click();
-
         urunEklemePages.buyNow.click();
         //Thread.sleep(2000);
        // Driver.wait(3);
