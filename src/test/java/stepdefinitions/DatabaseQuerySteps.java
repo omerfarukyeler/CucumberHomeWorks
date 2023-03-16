@@ -51,6 +51,7 @@ public class DatabaseQuerySteps {
     public void productNameChangeIsVerifiedAndPrint() throws SQLException {
 
 
+
             }
 
     @Then("print average price")
@@ -64,7 +65,14 @@ public class DatabaseQuerySteps {
     }
 
     @Then("print headers differently")
-    public void printHeadersDifferently() {
+    public void printHeadersDifferently() throws SQLException {
+        String sql = "UPDATE market2 SET name='ikinciel' WHERE id=1";
+        statement.executeUpdate(sql);
+
+        resultSet = statement.executeQuery("SELECT * FROM market2");
+        resultSet.first();
+        String name = resultSet.getString("market2");
+        System.out.println("name = " + name);
 
     }
 
